@@ -1,16 +1,16 @@
 body {
     font-family: 'Courier New', Courier, monospace;
+    background-color: lightblue;
 }
 
 #grid {
     text-align: center;
-    background-color: lightpink;
     min-width: fit-content;
 }
 
 #text {
     text-align: center;
-    background-color: lightcoral;
+    color:white;
     min-width: fit-content;
 }
 
@@ -24,4 +24,8 @@ button {
     border-style: none;
     font-size: 5em;
     display: inline-block;
+}
+
+img {
+    width: 10px;
 }

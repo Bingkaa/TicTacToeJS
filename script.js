@@ -20,7 +20,6 @@ function chooseBox(element) {
     if (!endGame) {
         // Check if spot is already taken
         if (element.innerHTML != "\u2060") {
-            console.log(element.innerHTML);
             document.getElementById("error").innerHTML = "That space is already taken.";
         } else {
             element.innerHTML = turn.toString();
