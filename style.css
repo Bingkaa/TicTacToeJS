@@ -1,0 +1,27 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#grid {
+    text-align: center;
+    background-color: lightpink;
+    min-width: fit-content;
+}
+
+#text {
+    text-align: center;
+    background-color: lightcoral;
+    min-width: fit-content;
+}
+
+button {
+    min-width: 100px;
+    min-height: 100px;
+    width: 12vw;
+    height: 12vw;
+    margin: 0.5vw;
+    background-color: white;
+    border-style: none;
+    font-size: 5em;
+    display: inline-block;
+}
