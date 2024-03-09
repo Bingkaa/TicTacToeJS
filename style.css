@@ -1,28 +1,61 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: lightblue;
+html, body {
+    font-family: Helvetica, sans-serif;
+    background-color: #222831;
+    margin: 0;
+    padding: 0;
 }
 
 #grid {
+    margin: 10px auto;
     text-align: center;
-    min-width: fit-content;
+    min-width: 350px;
+    max-width: 70%;
 }
 
 #text {
+    height: 10vh;
+    margin: 1vh auto;
     text-align: center;
-    color:white;
-    min-width: fit-content;
+    color:#EEEEEE;
+    min-width: 330px;
+    min-height: 100px;
+    max-width: 31.5%;
+    background-color: #76ABAE;
+
+    /* Center items vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button {
     min-width: 100px;
     min-height: 100px;
-    width: 12vw;
-    height: 12vw;
-    margin: 0.5vw;
-    background-color: white;
+    width: 10vw;
+    height: 10vw;
+    margin: 0.5vh 0.5vh;
+    background-color: #EEEEEE;
     border-style: none;
-    font-size: 5em;
+    font-size: 8vw;
     display: inline-block;
-    color: darkslateblue;
+    color: #31363F;
+}
+
+#header {
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    font-weight: bolder;
+    margin: 0;
+    padding: 12px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set a minimum font size */
+@media screen and (max-width: 600px) {
+    button {
+        font-size: 5em; 
+    }
 }
