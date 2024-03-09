@@ -31,6 +31,7 @@ function chooseBox(element) {
 
             // Check for winners
             checkWin();
+
             if (endGame) {
                 return;
             }
@@ -64,6 +65,26 @@ function checkWin() {
         endGame = true;
     } else if (grid[0][2] == turn && grid[1][1] == turn && grid[2][0] == turn) {
         document.getElementById("message").innerHTML = "Player " + turn + " won!";
+        endGame = true;
+    }
+
+    // Check for draw
+    var draw = true;
+
+    for (var row = 0; row < grid.length; row++) {
+        for (var col = 0; col < grid[row].length; col++) {
+            if (grid[row][col] == "") {
+                draw = false;
+                break;
+            }
+        }
+        if (!draw) {
+            break;
+        }
+    }
+
+    if (draw) {
+        document.getElementById("message").innerHTML = "It's a draw!";
         endGame = true;
     }
 }

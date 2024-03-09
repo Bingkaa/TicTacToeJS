@@ -24,8 +24,5 @@ button {
     border-style: none;
     font-size: 5em;
     display: inline-block;
-}
-
-img {
-    width: 10px;
+    color: darkslateblue;
 }
