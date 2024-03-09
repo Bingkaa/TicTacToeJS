@@ -28,7 +28,7 @@ html, body {
     justify-content: center;
 }
 
-button {
+#grid > button {
     min-width: 100px;
     min-height: 100px;
     width: 10vw;
@@ -39,6 +39,12 @@ button {
     font-size: 8vw;
     display: inline-block;
     color: #31363F;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#grid > button:hover {
+    box-shadow: 0 4px 8px 0 rgba(118, 171, 174, 0.5), 0 6px 20px 0 rgba(118, 171, 174, 0.5);
+    transition: 300ms;
 }
 
 #header {
@@ -53,9 +59,67 @@ button {
     justify-content: center;
 }
 
+#desc {
+    height: 5vh;
+    margin: 1vh auto;
+    text-align: center;
+    color:#EEEEEE;
+    min-width: 330px;
+    min-height: 40px;
+    max-width: 31.5%;
+
+    /* Center items vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#end-screen {
+    background-color: #76ABAE;
+    color: #EEEEEE;
+    padding: 10px;
+    min-width: 350px;
+    min-height: 20px;
+    max-height: 100px;
+    width: 35vw;
+    height: 20vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+
+    opacity: 0;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#reset {
+    height: 50px;
+    width: 200px;
+    background-color: #222831;
+    color: #76ABAE;
+}
+
+#end-screen.open {
+    opacity: 1;
+    z-index: 999;
+}
+
 /* Set a minimum font size */
 @media screen and (max-width: 600px) {
-    button {
+    #grid > button {
         font-size: 5em; 
     }
+
+    #end-screen {
+        font-size: 12px;
+    }
 }
+

@@ -10,6 +10,10 @@
     </head>
     <body>
         <div id="header"><h1>Tic Tac Toe</h1></div>
+        <div id="end-screen">
+            <h2>Would you like to play again?</h2>
+            <button id="reset">Reset</button>
+        </div>
         <div id="grid">
             <button onclick="chooseBox(this)" id="00"><div class="inner"></div></button>
             <button onclick="chooseBox(this)" id="01"></button>
@@ -25,6 +29,8 @@
         </div>
         <div id="text">
             <h1 id="message"></h1>
+        </div>
+        <div id="desc">
             <h2 id="error"></h2>
         </div>
         <script src="script.js"></script>

@@ -1,3 +1,6 @@
+const resetBtn = document.getElementById("reset");
+const endscreen = document.getElementById("end-screen");
+
 var grid = [
     ["", "", ""],
     ["", "", ""],
@@ -22,6 +25,7 @@ function chooseBox(element) {
         if (element.innerHTML != "\u2060") {
             document.getElementById("error").innerHTML = "That space is already taken.";
         } else {
+            document.getElementById("error").innerHTML = "";
             element.innerHTML = turn.toString();
 
             // Update our JS grid
@@ -33,6 +37,7 @@ function chooseBox(element) {
             checkWin();
 
             if (endGame) {
+                endscreen.classList.add("open");
                 return;
             }
 
@@ -88,3 +93,26 @@ function checkWin() {
         endGame = true;
     }
 }
+
+resetBtn.addEventListener("click", () => {
+    endscreen.classList.remove("open");
+
+    // Clear buttons
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].innerHTML = "\u2060";
+    }
+
+    // Reset the grid array
+    grid = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+    ];
+
+    // Reset the endGame variable
+    endGame = false;
+
+    // Reset the turn
+    turn = "o";
+    document.getElementById("message").innerHTML = "It is currently " + turn + "'s turn.";
+})
